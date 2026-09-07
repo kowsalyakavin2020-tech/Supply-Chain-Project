@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Stackly | Supply Chain Visibility Platform</title>
+<link rel="icon" type="image/webp" href="../images/logo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <img src="../images/logo-full.webp" alt="" class="preloader-mark">
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="nav-pill">
+    <div class="logo"><a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly"></a></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-solid">Login</a>
+      <a href="#" class="btn btn-outline">Signup</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-top">
+    <a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly" class="mobile-menu-logo"></a>
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="mobile-menu-links">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu-actions">
+    <a href="#" class="btn btn-solid">Login</a>
+    <a href="#" class="btn btn-outline">Signup</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-hero-grid">
+      <div class="blog-hero-text">
+        <h1>Notes from the operations floor, not the marketing floor.</h1>
+        <p>Field notes on freight, inventory, and procurement from our own operators and analysts — plus the occasional look under the hood of the platform itself.</p>
+        <form class="blog-search" id="blogSearchForm">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" placeholder="Search articles" id="blogSearchInput">
+  <button type="submit">Search</button>
+</form>
+<span class="search-error" id="blogSearchError">Please type something to search.</span>
+      </div>
+      <div class="blog-hero-image">
+        <img src="../images/blog-hero.jpg" alt="Operator inspecting warehouse stock">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED ARTICLE ===== -->
+<section class="blog-featured">
+  <div class="container">
+    <h2>Why the next shipping disruption won't look like the last one</h2>
+    <p class="blog-featured-desc">We looked at four years of lane-level delay data across our network to understand which disruptions are becoming more frequent, which are fading, and what that means for how much buffer inventory you actually need.</p>
+
+    <div class="blog-featured-image">
+      <img src="../images/blog-culture.jpg" alt="Warehouse workers among stacked boxes">
+    </div>
+
+    <div class="blog-featured-meta">
+      <span class="meta-item"><strong>Rosa Lindqvist</strong></span>
+      <span class="meta-item"><strong>12 min read</strong></span>
+      <span class="meta-item"><strong>Aug 24, 2026</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECENT POSTS ===== -->
+<section class="blog-recent">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recent posts</h2>
+      <p>New from the team, roughly twice a week.</p>
+    </div>
+
+    <div class="blog-recent-grid">
+      <div class="blog-post-card" data-category="inventory">
+        <div class="blog-post-img"><img src="../images/inventory.jpg" alt="Warehouse safety stock racks"></div>
+        <span class="blog-tag">INVENTORY</span>
+        <h3>Safety stock is a guess. Here's how to make it a better one</h3>
+        <p>Static safety stock formulas break the moment lead times get noisy. A simpler approach that adjusts weekly.</p>
+        <div class="blog-post-meta"><span>Nadia Prakash</span><span>7 min</span></div>
+      </div>
+
+      <div class="blog-post-card" data-category="freight">
+        <div class="blog-post-img"><img src="../images/freight.jpg" alt="Freight train yard at sunrise"></div>
+        <span class="blog-tag">FREIGHT</span>
+        <h3>Ocean freight rates, Q3 2026: what actually moved them</h3>
+        <p>A lane-by-lane breakdown of the quarter's rate swings, and which were driven by capacity versus demand.</p>
+        <div class="blog-post-meta"><span>Theo Marsh</span><span>9 min</span></div>
+      </div>
+
+      <div class="blog-sidebar">
+        <div class="blog-sidebar-box">
+          <h4>Search Articles</h4>
+          <form class="blog-sidebar-search" id="sidebarSearchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Articles" id="sidebarSearchInput">
+          </form>
+          <span class="search-error" id="sidebarSearchError">Please type something to search.</span>
+        </div>
+        <div class="blog-sidebar-box">
+          <h4>Pick the tab that matches your matter.</h4>
+          <div class="blog-filter-pills">
+            <button class="pill active" data-filter="all">All</button>
+            <button class="pill" data-filter="freight">Freight</button>
+            <button class="pill" data-filter="case-studies">Case studies</button>
+            <button class="pill" data-filter="inventory">Inventory</button>
+            <button class="pill" data-filter="procurement">procurement</button>
+            <button class="pill" data-filter="product-updates">Product updates</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-post-card" data-category="product-updates">
+        <div class="blog-post-img"><img src="../images/product.jpg" alt="Handwritten notebook on desk"></div>
+        <span class="blog-tag">PRODUCT</span>
+        <h3>Inside the new auto-rebooking engine</h3>
+        <p>Static safety stock formulas break the moment lead times get noisy. A simpler approach that adjusts weekly.</p>
+        <div class="blog-post-meta"><span>Iman Okafor</span><span>6 min</span></div>
+      </div>
+
+      <div class="blog-post-card" data-category="procurement">
+        <div class="blog-post-img"><img src="../images/procurement.jpg" alt="Scrabble tiles spelling credit"></div>
+        <span class="blog-tag">PROCUREMENT</span>
+        <h3>Supplier scorecards that suppliers actually respect</h3>
+        <p>The difference between a scorecard that changes behavior and one that just gets ignored in a QBR deck.</p>
+        <div class="blog-post-meta"><span>Nadia Prakash</span><span>7 min</span></div>
+      </div>
+
+      <div class="blog-post-card" data-category="case-studies">
+        <div class="blog-post-img"><img src="../images/case study.jpg" alt="Self-checkout kiosk in a store"></div>
+        <span class="blog-tag">CASE STUDY</span>
+        <h3>How Northfield Foods cut stockouts by a third</h3>
+        <p>A look at the rollout, the resistance from planners, and the number that finally won the room over.</p>
+        <div class="blog-post-meta"><span>Amara Klein</span><span>10 min</span></div>
+      </div>
+
+      <div class="blog-post-card" data-category="freight">
+        <div class="blog-post-img"><img src="../images/disruption.jpg" alt="Scrabble tiles spelling innovation"></div>
+        <span class="blog-tag">DISRUPTION</span>
+        <h3>Reading a port congestion signal before it hits the news</h3>
+        <p>The early indicators our control tower watches, days before a congestion event becomes a headline.</p>
+        <div class="blog-post-meta"><span>Sena Watanabe</span><span>5 min</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== TEAM ===== -->
+<section class="blog-team">
+  <div class="container">
+    <div class="section-head">
+      <h2>The team steering the ship</h2>
+      <p>A mix of operators, engineers, and people who've bought freight for a living.</p>
+    </div>
+
+    <div class="blog-team-grid">
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-dara.webp" alt="Dara Voss"></div>
+        <h4>Dara Voss</h4>
+        <span>Co-founder &amp; CEO</span>
+      </div>
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-iman.webp" alt="Iman Okafor"></div>
+        <h4>Iman Okafor</h4>
+        <span>Co-founder &amp; CTO</span>
+      </div>
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-rosa.webp" alt="Rosa Lindqvist"></div>
+        <h4>Rosa Lindqvist</h4>
+        <span>VP Engineering</span>
+      </div>
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-theo.webp" alt="Theo Marsh"></div>
+        <h4>Theo Marsh</h4>
+        <span>VP Customer Operations</span>
+      </div>
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-nadia.webp" alt="Nadia Prakash"></div>
+        <h4>Nadia Prakash</h4>
+        <span>VP Product</span>
+      </div>
+      <div class="team-member">
+        <div class="team-member-img"><img src="../images/team-julien.webp" alt="Julien Cassel"></div>
+        <h4>Julien Cassel</h4>
+        <span>Head of Partnerships</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="blog-categories">
+  <div class="container">
+    <div class="section-head">
+      <h2>Find what's relevant to your role</h2>
+      <p>Every post is tagged by the part of the operation it speaks to.</p>
+    </div>
+
+    <div class="blog-cat-grid">
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-1.jpg" alt="Freight train">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Freight &amp; logistics</h4>
+        <span>86 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-2.jpg" alt="Inventory racks">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Inventory planning</h4>
+        <span>68 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-3.jpg" alt="Procurement box on scale">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Procurement</h4>
+        <span>42 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-4.jpg" alt="Dice, risk">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Disruption &amp; risk</h4>
+        <span>85 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-5.jpg" alt="Laptop with product dashboard">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Product updates</h4>
+        <span>73 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-6.jpg" alt="Case study paperwork">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Case studies</h4>
+        <span>33 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-7.jpg" alt="Data network visualization">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Data &amp; analytics</h4>
+        <span>42 posts</span>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="../images/post-8.jpg" alt="Team culture group photo">
+          <div class="cat-overlay"><a href="./404.html"><button class="cat-btn">View posts</button></a></div>
+        </div>
+        <h4>Team &amp; culture</h4>
+        <span>85 posts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly"></a></div>
+        <p>Join our community to unlock exclusive insights and innovative solutions for all your supply chain needs</p>
+        <h5 style="margin-top:26px;">Follow us</h5>
+        <div class="social-row">
+          <a href="./404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="./404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="contact-block">
+        <h5>Contact us</h5>
+        <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008.</p>
+        <p>info@stackly.com</p>
+        <p>+91 98765 43210</p>
+      </div>
+      <div>
+        <h5>Newsletter</h5>
+        <p style="margin-bottom:12px;">Got Event in Mind?<br>Let's collaborate.</p>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <input type="email" placeholder="Enter your email" id="newsletterEmail">
+          <button type="submit">Submit</button>
+        </form>
+        <span class="newsletter-error" id="newsletterError"></span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Stackly. All rights reserved.</span>
+      <a href="./404.html"><span class="footer-terms">Privacy Policy · Terms of Service</span></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="../js/script.js"></script>
+<script src="../js/blog.js"></script>
+
+</body>
+</html>

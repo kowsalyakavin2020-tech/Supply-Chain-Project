@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly — Supply Chain Visibility Platform</title>
+<link rel="icon" type="image/webp" href="images/logo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <img src="images/logo-full.webp" alt="" class="preloader-mark">
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- Header -->
+ 
+<header>
+  <div class="nav-pill">
+    <div class="logo"><a href="index.html"><img src="images/logo-full.webp" alt="Stackly"></a></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#" class="active">Home</a>
+      <a href="html/about.html">About</a>
+      <a href="html/services.html">Services</a>
+      <a href="html/blog.html">Blog</a>
+      <a href="html/contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-solid">Login</a>
+      <a href="#" class="btn btn-outline">Signup</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- Hero (image covers full section, header floats on top of it) -->
+<section class="hero hero-with-nav">
+  <div class="hero-bg">
+    <img src="images/hero-truck-dock.webp" alt="Freight truck loaded with boxes at a warehouse dock" class="hero-slide active">
+    <img src="images/haris-illahi-fT4SwA83jH4-unsplash.jpg" alt="Warehouse workers reviewing inventory" class="hero-slide">
+    <img src="images/venti-views-FPKnAO-CF6M-unsplash.jpg" alt="Automated warehouse coordination" class="hero-slide">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="active" aria-label="Slide 1" data-index="0"></button>
+    <button aria-label="Slide 2" data-index="1"></button>
+    <button aria-label="Slide 3" data-index="2"></button>
+  </div>
+
+
+ <div class="hero-stat-cards">
+  <div class="stat-card">
+    <span class="stat-num serif-stat" data-count="6.2" data-suffix="M" data-decimal="1">0M</span>
+    <span class="stat-label">shipments tracked monthly</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-num serif-stat" data-count="140" data-suffix="">0</span>
+    <span class="stat-label">countries covered</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-num serif-stat" data-count="31" data-suffix="%">0%</span>
+    <span class="stat-label">avg. reduction in stockouts</span>
+  </div>
+</div>
+  
+
+  
+
+<!-- Full-screen mobile menu overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-top">
+    <a href="index.html"><img src="images/logo-full.webp" alt="Stackly" class="mobile-menu-logo"></a>
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="mobile-menu-links">
+    <a href="#" class="active">Home</a>
+    <a href="html/about.html">About</a>
+    <a href="html/services.html">Services</a>
+    <a href="html/blog.html">Blog</a>
+    <a href="html/contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu-actions">
+    <a href="#" class="btn btn-solid">Login</a>
+    <a href="#" class="btn btn-outline">Signup</a>
+  </div>
+</div>
+
+  <div class="container hero-inner">
+    <div class="hero-top">
+      <h1 class="hero-stack">
+        <span class="line line-1">See every shipment, every</span>
+        <span class="line line-2">supplier, every delay —</span>
+        <span class="line line-3">before it costs you.</span>
+      </h1>
+      <div class="hero-side">
+        <p class="hero-side-title">Portway unifies procurement, inventory, and freight data into one live map of your supply chain, so operations teams catch disruption hours before it reaches the dock.</p>
+      </div>
+      <div class="hero-bottom-row">
+  <div class="hero-cta-row">
+    <a href="./html/404.html" class="btn btn-solid">Book a demo</a>
+    <a href="./html/404.html" class="btn btn-outline">See the control tower</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>One system for the four things that break supply chains</h2>
+      <p>Portway replaces the spreadsheets and phone calls between your suppliers, warehouse, and freight partners with a single source of truth.</p>
+    </div>
+    <div class="feature-grid">
+  <div class="feature-card-img">
+    <img src="images/filters_quality(80)_format(webp).webp" alt="Real-time shipment visibility">
+    <div class="feature-card-overlay"></div>
+    <div class="feature-card-content">
+      <h3>Real-time shipment visibility</h3>
+      <p>Track ocean, air, rail, and road freight on one live map, with automatic delay alerts sent to the people who can act on them.</p>
+    </div>
+  </div>
+  <div class="feature-card-img">
+    <img src="images/automated-warehouse-coordination.jpg" alt="Inventory orchestration">
+    <div class="feature-card-overlay"></div>
+    <div class="feature-card-content">
+      <h3>Inventory orchestration</h3>
+      <p>Balance stock across every warehouse and store automatically, using live demand rather than last quarter's forecast.</p>
+    </div>
+  </div>
+  <div class="feature-card-img">
+    <img src="images/images.jpeg" alt="Supplier & procurement management">
+    <div class="feature-card-overlay"></div>
+    <div class="feature-card-content">
+      <h3>Supplier &amp; procurement management</h3>
+      <p>Score suppliers on lead time and reliability, then route new purchase orders to whoever can actually deliver on time.</p>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- Ops metrics -->
+<section>
+  <div class="container">
+    <div class="ops-split-layout">
+      <div class="ops-split-text">
+        <h2>What ops teams get in the first two quarters</h2>
+        <p>Figures pulled from customer operating reviews across manufacturing, apparel, and electronics.From the first week, teams get a single dashboard that replaces spreadsheets, email threads, and phone calls with suppliers. Every shipment, every warehouse, and every reorder point stays visible in one place — so decisions happen in minutes, not days.</p>
+      </div>
+      <div class="ops-image" id="opsImage">
+        <img src="images/warehouse.webp" alt="Warehouse workers reviewing inventory on a tablet">
+      </div>
+    </div>
+    <div class="ops-stats" id="opsStats">
+  <div class="ops-stat-item">
+    <span class="stat-num serif-stat" data-count="31" data-suffix="%">0%</span>
+    <span class="stat-label">fewer stockouts across covered SKUs</span>
+  </div>
+  <div class="ops-stat-item">
+    <span class="stat-num serif-stat" data-count="18" data-suffix=" hrs">0 hrs</span>
+    <span class="stat-label">earlier warning on freight delays, on average</span>
+  </div>
+  <div class="ops-stat-item">
+    <span class="stat-num serif-stat" data-count="2.4" data-prefix="$" data-suffix="M" data-decimal="1">$0M</span>
+    <span class="stat-label">in expedited-shipping costs avoided annually</span>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Live in weeks, not quarters</h2>
+      <p>Portway connects to the systems you already run — no rip-and-replace, no six-month rollout.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card step-left">
+        <div class="step-num">1</div>
+        <h3>Connect your systems</h3>
+        <p>Link your ERP, WMS, and carrier accounts through pre-built connectors — most teams finish in an afternoon.</p>
+      </div>
+      <div class="step-card step-right">
+        <div class="step-num">2</div>
+        <h3>Map your network</h3>
+        <p>Portway pulls in every supplier, warehouse, and lane automatically and builds a live map of your operation.</p>
+      </div>
+      <div class="step-card step-left">
+        <div class="step-num">3</div>
+        <h3>Set your thresholds</h3>
+        <p>Tell Portway what counts as a delay or a stockout risk for your business, in your own terms.</p>
+      </div>
+      <div class="step-card step-right">
+        <div class="step-num">4</div>
+        <h3>Act on live alerts</h3>
+        <p>Your team gets notified the moment something goes off plan, with enough context to fix it before it escalates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h2>The team steering the ship</h2>
+      <p>A mix of operators, engineers, and people who've bought freight for a living.</p>
+    </div>
+
+    <div class="team-carousel">
+      <button class="team-arrow team-arrow-left" id="teamPrev" aria-label="Previous">‹</button>
+
+      <div class="team-track-wrap">
+        <div class="team-track" id="teamTrack">
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-dara.webp" alt="Dara Voss">
+              <div class="team-sidebar">
+                <h4>Dara Voss</h4>
+                <p>Co-founder &amp; CEO</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-iman.webp" alt="Iman Okafor">
+              <div class="team-sidebar">
+                <h4>Iman Okafor</h4>
+                <p>Co-founder &amp; CTO</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-rosa.webp" alt="Rosa Lindqvist">
+              <div class="team-sidebar">
+                <h4>Rosa Lindqvist</h4>
+                <p>VP Engineering</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-theo.webp" alt="Theo Marsh">
+              <div class="team-sidebar">
+                <h4>Theo Marsh</h4>
+                <p>VP Customer Operations</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-nadia.webp" alt="Nadia Prakash">
+              <div class="team-sidebar">
+                <h4>Nadia Prakash</h4>
+                <p>VP Product</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-img-wrap">
+              <img src="images/team-julien.webp" alt="Julien Cassel">
+              <div class="team-sidebar">
+                <h4>Julien Cassel</h4>
+                <p>Head of Partnerships</p>
+                <div class="team-social">
+    <a href="./html/404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="./html/404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="team-arrow team-arrow-right" id="teamNext" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="blog">
+  <div class="container">
+    <div class="testi-wrap">
+      <div class="testi-top">
+        <div>
+          <p class="eyebrow">Testimonials</p>
+          <h2>Trusted By Worldwide</h2>
+        </div>
+        <p class="desc">Many companies already work with us. Praise pleases us, criticism helps us because we want to get better every day.</p>
+      </div>
+
+      <!-- Slide 1 -->
+      <div class="testi-slide active">
+        <div class="testi-grid">
+          <img src="images/testimonial-jordan.webp" alt="Jordan Riche">
+          <div>
+            <p class="testi-quote">"Their team went above and beyond to ensure our deliveries were on time, every time."</p>
+            <p class="testi-body">"The reliability and dedication of Logix have been essential to keeping our production line running smoothly. They provide real-time updates, quick responses, and solutions to every challenge we encounter."</p>
+            <p class="testi-author">Jordan Riche</p>
+            <p class="testi-role">Philadelphia, Pennsylvania &nbsp;·&nbsp; Manufacturer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testi-slide">
+        <div class="testi-grid">
+          <img src="images/shara.avif" alt="Sarah Kim">
+          <div>
+            <p class="testi-quote">"Portway gave us complete visibility across our entire supplier network in just weeks."</p>
+            <p class="testi-body">"Before Portway, we were constantly firefighting delays. Now our operations team gets alerts hours before issues reach the dock. The ROI was immediate and measurable."</p>
+            <p class="testi-author">Sarah Kim</p>
+            <p class="testi-role">San Francisco, California &nbsp;·&nbsp; Electronics Retailer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="testi-slide">
+        <div class="testi-grid">
+          <img src="images/testi2.avif" alt="Marcus Webb">
+          <div>
+            <p class="testi-quote">"We reduced expedited shipping costs by 40% in the first quarter alone."</p>
+            <p class="testi-body">"The supplier scoring feature alone changed how we make procurement decisions. We now route orders based on real reliability data, not gut feel. Stackly has transformed how we run our supply chain."</p>
+            <p class="testi-author">Marcus Webb</p>
+            <p class="testi-role">Chicago, Illinois &nbsp;·&nbsp; Logistics Manager</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-dots">
+        <button class="active" aria-label="Testimonial 1"></button>
+        <button aria-label="Testimonial 2"></button>
+        <button aria-label="Testimonial 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta">
+      <div class="cta-bg">
+        <img src="images/hero-truck.webp" alt="">
+        <div class="cta-overlay"></div>
+      </div>
+      <h2>Ready to see your supply chain in one place?</h2>
+      <p>Book a 30-minute walkthrough with our operations team — bring your worst lane and we'll show you what Portway would have caught.</p>
+      <div class="hero-actions">
+        <a href="./html/404.html" class="btn btn-solid">Book a demo</a>
+        <a href="./html/404.html" class="btn btn-outline">See the control tower</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="images/logo-full.webp" alt="Stackly"></a></div>
+        <p>Join our community to unlock exclusive insights and innovative solutions for all your supply chain needs</p>
+        <h5 style="margin-top:26px;">Follow us</h5>
+        <div class="social-row">
+          <a href="./html/404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./html/404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./html/404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="./html/404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h5>Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html/about.html">About</a></li>
+          <li><a href="html/services.html">Services</a></li>
+          <li><a href="html/blog.html">Blog</a></li>
+          <li><a href="html/contact.html">Contact</a></li>
+        </ul>
+        
+      </div>
+      <div class="contact-block">
+        <h5>Contact us</h5>
+        <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008.</p>
+        <p>info@stackly.com</p>
+        <p>+91 98765 43210</p>
+      </div>
+      <div>
+        <h5>Newsletter</h5>
+        <p style="margin-bottom:12px;">Got Event in Mind?<br>Let's collaborate.</p>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <input type="email" placeholder="Enter your email" id="newsletterEmail">
+          <button type="submit">Submit</button>
+        </form>
+        <span class="newsletter-error" id="newsletterError"></span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Stackly. All rights reserved.</span>
+      <a href="./html/404.html"><span class="footer-terms">Privacy Policy · Terms of Service</span></a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
