@@ -314,10 +314,12 @@ heroStatNums.forEach((el, i) => {
 // Sticky navbar background on scroll
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
-  if (window.scrollY > 100) {
-    header.style.background = 'rgba(9,34,25,0.85)';
-  } else {
-    header.style.background = 'transparent';
+  if (header) {
+    if (window.scrollY > 100) {
+      header.style.background = 'rgba(9,34,25,0.85)';
+    } else {
+      header.style.background = 'transparent';
+    }
   }
 });
 
