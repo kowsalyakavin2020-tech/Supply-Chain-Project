@@ -19,7 +19,7 @@
 <!-- Sidebar -->
 <aside class="dash-sidebar" id="dashSidebar">
   <div class="dash-logo">
-    <img src="../images/logo-full.webp" alt="Stackly">
+    <a href="../index.html"><img src="../images/logo-full.webp" alt="Stackly"></a>
     <button class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
 
@@ -34,7 +34,7 @@
 
     <div class="dash-nav-label">System</div>
     <a href="#" data-section="access"><i class="fa-solid fa-shield-halved"></i> Access Control</a>
-    <a href="#" data-section="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    
   </nav>
 
   <div class="dash-sidebar-footer">
@@ -64,7 +64,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search users, hubs...">
       </div>
-      <button class="dash-bell" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+      <a href="./404.html"><button class="dash-bell" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button></a>
       <div class="dash-user">
         <div class="dash-user-avatar" data-user-initial>?</div>
         <div class="dash-user-info">
@@ -98,7 +98,7 @@
 
     <div class="dash-grid">
       <div class="dash-card">
-        <div class="dash-card-head"><h3>Users &amp; Operators</h3><a href="#" data-section-link="users">Manage all</a></div>
+        <div class="dash-card-head"><h3>Users &amp; Operators</h3><a href="./404.html">Manage all</a></div>
         <table class="dash-table">
           <thead><tr><th>Name</th><th>Role</th><th>Region</th><th>Status</th></tr></thead>
           <tbody id="userTableBody"></tbody>
@@ -106,7 +106,7 @@
       </div>
 
       <div class="dash-card">
-        <div class="dash-card-head"><h3>Hub Capacity</h3><a href="#" data-section-link="hubs">Details</a></div>
+        <div class="dash-card-head"><h3>Hub Capacity</h3><a href="./404.html">Details</a></div>
         <div class="dash-progress-row"><div class="dash-progress-labels"><span>Chennai Hub</span><span>82%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:82%"></div></div></div>
         <div class="dash-progress-row"><div class="dash-progress-labels"><span>Coimbatore Hub</span><span>64%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:64%"></div></div></div>
         <div class="dash-progress-row"><div class="dash-progress-labels"><span>Madurai Hub</span><span>91%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:91%"></div></div></div>
@@ -124,7 +124,7 @@
       <div class="dash-stat-card"><div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-user-slash"></i></div><span class="dash-stat-trend down">-2</span></div><div class="dash-stat-num">7</div><div class="dash-stat-label">Inactive</div></div>
     </div>
     <div class="dash-card">
-      <div class="dash-card-head"><h3>All Accounts</h3><a href="#">+ Add User</a></div>
+      <div class="dash-card-head"><h3>All Accounts</h3><a href="./404.html">+ Add User</a></div>
       <table class="dash-table">
         <thead><tr><th>Name</th><th>Role</th><th>Region</th><th>Status</th><th></th></tr></thead>
         <tbody id="allUserTableBody"></tbody>
@@ -141,7 +141,7 @@
       <div class="dash-stat-card"><div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-bullseye"></i></div><span class="dash-stat-trend up">+0.4%</span></div><div class="dash-stat-num">94.8%</div><div class="dash-stat-label">On-time Rate</div></div>
     </div>
     <div class="dash-card">
-      <div class="dash-card-head"><h3>All Shipments</h3><a href="#">Export CSV</a></div>
+      <div class="dash-card-head"><h3>All Shipments</h3><a href="./404.html">Export CSV</a></div>
       <div class="dash-tabs">
         <button class="dash-tab active" data-filter="All">All</button>
         <button class="dash-tab" data-filter="In Transit">In Transit</button>
@@ -158,11 +158,11 @@
   <!-- ===================== HUBS ===================== -->
   <section class="dash-section" id="section-hubs" hidden>
     <div class="dash-card" style="margin-bottom:20px;">
-      <div class="dash-card-head"><h3>Hubs</h3><a href="#">+ Add Hub</a></div>
+      <div class="dash-card-head"><h3>Hubs</h3><a href="./404.html">+ Add Hub</a></div>
       <div class="dash-item-grid" id="hubGrid"></div>
     </div>
     <div class="dash-card">
-      <div class="dash-card-head"><h3>Inventory Alerts</h3><a href="#">View Full Inventory</a></div>
+      <div class="dash-card-head"><h3>Inventory Alerts</h3><a href="./404.html">View Full Inventory</a></div>
       <table class="dash-table">
         <thead><tr><th>Item</th><th>Hub</th><th>In Stock</th><th>Min. Required</th><th>Status</th></tr></thead>
         <tbody id="inventoryTableBody"></tbody>
@@ -209,7 +209,7 @@
     </div>
 
     <div class="dash-card">
-      <div class="dash-card-head"><h3>Permission Matrix</h3><a href="#">+ New Role</a></div>
+      <div class="dash-card-head"><h3>Permission Matrix</h3><a href="./404.html">+ New Role</a></div>
       <table class="dash-table dash-access-table">
         <thead><tr><th>Permission</th><th>Operator</th><th>Admin</th></tr></thead>
         <tbody>
@@ -230,29 +230,7 @@
     </div>
   </section>
 
-  <!-- ===================== SETTINGS ===================== -->
-  <section class="dash-section" id="section-settings" hidden>
-    <div class="dash-grid">
-      <div class="dash-card">
-        <div class="dash-card-head"><h3>Organization Details</h3></div>
-        <div class="dash-form-row">
-          <div class="dash-form-field"><label>Company Name</label><input type="text" value="Stackly Supply Chain"></div>
-          <div class="dash-form-field"><label>Support Email</label><input type="text" value="support@stackly.com"></div>
-          <div class="dash-form-field"><label>Default Region</label><select><option>Tamil Nadu</option><option>Karnataka</option><option>Kerala</option></select></div>
-          <div class="dash-form-field"><label>Time Zone</label><select><option>IST (UTC +5:30)</option><option>UTC</option></select></div>
-          <div class="dash-form-field full"><label>Notes</label><input type="text" placeholder="Internal notes for this workspace..."></div>
-        </div>
-        <button class="btn btn-solid" style="margin-top:6px;">Save Changes</button>
-      </div>
-      <div class="dash-card">
-        <div class="dash-card-head"><h3>Preferences</h3></div>
-        <div class="dash-toggle-row"><div><p>Email notifications</p><span>Get updates on delayed shipments</span></div><button class="dash-switch on"></button></div>
-        <div class="dash-toggle-row"><div><p>Low stock alerts</p><span>Notify when inventory falls below minimum</span></div><button class="dash-switch on"></button></div>
-        <div class="dash-toggle-row"><div><p>Weekly summary report</p><span>Auto-generate every Monday</span></div><button class="dash-switch"></button></div>
-        <div class="dash-toggle-row"><div><p>Two-factor authentication</p><span>Require OTP for admin logins</span></div><button class="dash-switch on"></button></div>
-      </div>
-    </div>
-  </section>
+  
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

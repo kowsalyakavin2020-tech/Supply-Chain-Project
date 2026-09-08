@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hubs:       { admin: ['Hubs & Inventory', 'Capacity and inventory health across every hub.'] },
     analytics:  { admin: ['Analytics', 'Network performance trends over the last 30 days.'] },
     access:     { admin: ['Access Control', 'Permissions by role across the platform.'] },
-    settings:   { admin: ['Settings', 'Platform preferences and notification controls.'] },
+    
   };
 
   function showSection(name) {
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>${r.name}</p>
           <span>${r.period} · ${r.size}</span>
         </div>
-        <a href="#" style="color:var(--accent);font-size:13px;font-weight:600;"><i class="fa-solid fa-download"></i></a>
+        <a href="404.html" style="color:var(--accent);font-size:13px;font-weight:600;"><i class="fa-solid fa-download"></i></a>
       </div>`).join('');
   }
 
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <tr>
         <td>${row.name}</td><td>${row.role}</td><td>${row.region}</td>
         <td><span class="dash-pill ${row.kind}">${row.status}</span></td>
-        <td><a href="#" style="color:var(--accent);font-size:12.5px;font-weight:600;">Edit</a></td>
+        <td><a href="404.html" style="color:var(--accent);font-size:12.5px;font-weight:600;">Edit</a></td>
       </tr>`).join('');
   }
 
