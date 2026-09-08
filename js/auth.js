@@ -112,6 +112,21 @@ if (signupForm) {
   const agreeTerms = document.getElementById('agreeTerms');
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function isStrongPassword(value) {
+  return value.length >= 8 && /[0-9]/.test(value) && /[^A-Za-z0-9]/.test(value);
+}
+function updateStrengthBar(password) {
+  const bars = document.querySelectorAll('.password-strength .strength-bar');
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (/[0-9]/.test(password)) score++;
+  if (/[^A-Za-z0-9]/.test(password)) score++;
+  if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
+  bars.forEach((bar, i) => {
+    bar.classList.remove('weak', 'medium', 'strong');
+    if (i < score) bar.classList.add(score <= 1 ? 'weak' : score <= 2 ? 'medium' : 'strong');
+  });
+}
 
   function validateSignupField(field) {
     if (field === signupName) {
@@ -124,8 +139,8 @@ if (signupForm) {
       if (!emailPattern.test(field.value.trim())) { showFieldError(field); return false; }
     }
     if (field === signupPassword) {
-      if (field.value.trim().length < 6) { showFieldError(field); return false; }
-    }
+  if (!isStrongPassword(field.value)) { showFieldError(field); return false; }
+}
     if (field === signupConfirmPassword) {
       if (field.value.trim() === '' || field.value !== signupPassword.value) { showFieldError(field); return false; }
     }
@@ -138,7 +153,9 @@ if (signupForm) {
 
   [signupName, signupEmail, signupPassword, signupConfirmPassword].forEach(field => {
     field.addEventListener('input', () => validateSignupField(field));
+    
   });
+  signupPassword.addEventListener('input', () => updateStrengthBar(signupPassword.value));
   signupRole.addEventListener('change', () => validateSignupField(signupRole));
   agreeTerms.addEventListener('change', () => validateSignupField(agreeTerms));
 
@@ -161,7 +178,7 @@ if (signupForm) {
       return;
     }
 
-    const path404 = window.location.pathname.includes('/html/') ? '404.html' : 'html/404.html';
+    const path404 = window.location.pathname.includes('/html/') ? 'login.html' : 'html/login.html';
     window.location.href = path404;
   });
 }

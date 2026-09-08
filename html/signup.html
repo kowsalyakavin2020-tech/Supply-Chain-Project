@@ -62,10 +62,16 @@
         </div>
 
         <div class="field-wrap">
-          <label for="signupPassword">Password</label>
-          <input type="password" id="signupPassword" placeholder="Enter your password">
-          <span class="field-error">Password must be at least 6 characters.</span>
-        </div>
+  <label for="signupPassword">Password</label>
+  <input type="password" id="signupPassword" placeholder="Min. 8 characters">
+  <div class="password-strength">
+    <div class="strength-bar"></div>
+    <div class="strength-bar"></div>
+    <div class="strength-bar"></div>
+    <div class="strength-bar"></div>
+  </div>
+  <span class="field-error">Password must be 8+ characters, with a number and a symbol.</span>
+</div>
 
         <div class="field-wrap">
           <label for="signupConfirmPassword">Re-enter password</label>

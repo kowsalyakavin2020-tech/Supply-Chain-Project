@@ -309,3 +309,19 @@
   .auth-image img{ min-height: 220px; height: 220px; }
   .auth-row{ flex-direction: column; align-items: flex-start; }
 }
+
+.password-strength{
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+.strength-bar{
+  flex: 1;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.15);
+  transition: background 0.3s ease;
+}
+.strength-bar.weak{ background: #ff6b6b; }
+.strength-bar.medium{ background: #facc15; }
+.strength-bar.strong{ background: var(--accent); }
