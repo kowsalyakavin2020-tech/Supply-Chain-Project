@@ -1100,6 +1100,14 @@
 
 @media (max-width:960px){
   .step-left, .step-right{transform:translateX(0) translateY(40px);}
+  
+}
+
+@media (max-width:960px){
+  .step-left, .step-right{transform:translateX(0) translateY(40px);}
+  .steps-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Team Desktop Grid (901px and above) ---------- */
