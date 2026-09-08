@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator Dashboard — Stackly</title>
+<link rel="icon" type="image/webp" href="../images/logo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dash-body" data-role="operator">
+
+<div class="dash-backdrop" id="dashBackdrop"></div>
+
+<!-- Sidebar -->
+<aside class="dash-sidebar" id="dashSidebar">
+  <div class="dash-logo">
+    <img src="../images/logo-full.webp" alt="Stackly">
+    <button class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <span class="dash-role-pill" data-role-pill>Operator</span>
+
+  <nav class="dash-nav">
+    <a href="#" data-section="overview" class="active"><i class="fa-solid fa-gauge"></i> Overview</a>
+    <a href="#" data-section="shipments"><i class="fa-solid fa-truck"></i> Shipments</a>
+    <a href="#" data-section="inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+    <a href="#" data-section="routes"><i class="fa-solid fa-route"></i> Routes</a>
+    <a href="#" data-section="reports"><i class="fa-solid fa-chart-line"></i> Reports</a>
+  </nav>
+
+  <div class="dash-sidebar-footer">
+    <button class="dash-logout-btn" data-logout><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="dash-main">
+  <div class="dash-topbar">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <button class="dash-menu-toggle" id="dashMenuToggle"><i class="fa-solid fa-bars"></i></button>
+      <div class="dash-page-title">
+        <h1 id="pageTitle">Operator Overview</h1>
+        <p id="pageSubtitle">Track shipments, inventory, and routes in real time.</p>
+      </div>
+    </div>
+    <div class="dash-topbar-right">
+      <div class="dash-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search shipments, routes...">
+      </div>
+      <button class="dash-bell" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+      <div class="dash-user">
+        <div class="dash-user-avatar" data-user-initial>?</div>
+        <div class="dash-user-info">
+          <div class="name" data-user-name>Operator</div>
+          <div class="role" data-user-role>role</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <section class="dash-section" id="section-overview">
+    <div class="dash-welcome">
+      <div>
+        <h2>Welcome back, <span data-user-name>Operator</span> 👋</h2>
+        <p>Here's what's moving across your network today. 3 shipments need your attention.</p>
+      </div>
+      <div class="dash-welcome-badge"><i class="fa-solid fa-circle-check"></i> All systems normal</div>
+    </div>
+
+    <div class="dash-stats">
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-truck"></i></div><span class="dash-stat-trend up">+4.2%</span></div>
+        <div class="dash-stat-num">128</div><div class="dash-stat-label">Active Shipments</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-warehouse"></i></div><span class="dash-stat-trend up">+1.8%</span></div>
+        <div class="dash-stat-num">86%</div><div class="dash-stat-label">Inventory Level</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-clock"></i></div><span class="dash-stat-trend down">-2.1%</span></div>
+        <div class="dash-stat-num">9</div><div class="dash-stat-label">Pending Orders</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-bullseye"></i></div><span class="dash-stat-trend up">+0.6%</span></div>
+        <div class="dash-stat-num">96.4%</div><div class="dash-stat-label">On-time Delivery</div>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Recent Shipments</h3><a href="#" data-section-link="shipments">View all</a></div>
+        <table class="dash-table">
+          <thead><tr><th>ID</th><th>Route</th><th>Status</th><th>ETA</th></tr></thead>
+          <tbody id="shipmentTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Alerts</h3><a href="#">Clear all</a></div>
+        <div class="dash-list">
+          <div class="dash-list-item"><div class="dash-list-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div><p>SHP-2276 delayed at Bengaluru checkpoint</p><span>12 minutes ago</span></div></div>
+          <div class="dash-list-item"><div class="dash-list-icon"><i class="fa-solid fa-box-open"></i></div><div><p>Low stock: Cold-chain packaging (Coimbatore hub)</p><span>1 hour ago</span></div></div>
+          <div class="dash-list-item"><div class="dash-list-icon"><i class="fa-solid fa-route"></i></div><div><p>New optimized route suggested for Salem → Hyderabad</p><span>3 hours ago</span></div></div>
+          <div class="dash-list-item"><div class="dash-list-icon"><i class="fa-solid fa-circle-check"></i></div><div><p>SHP-2287 delivered successfully</p><span>Yesterday</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHIPMENTS ===================== -->
+  <section class="dash-section" id="section-shipments" hidden>
+    <div class="dash-stats">
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-truck"></i></div><span class="dash-stat-trend up">+4.2%</span></div>
+        <div class="dash-stat-num">128</div><div class="dash-stat-label">Active Shipments</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-circle-check"></i></div><span class="dash-stat-trend up">+2.3%</span></div>
+        <div class="dash-stat-num">96</div><div class="dash-stat-label">Delivered Today</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="dash-stat-trend down">-1.4%</span></div>
+        <div class="dash-stat-num">7</div><div class="dash-stat-label">Delayed</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-bullseye"></i></div><span class="dash-stat-trend up">+0.6%</span></div>
+        <div class="dash-stat-num">96.4%</div><div class="dash-stat-label">On-time Rate</div>
+      </div>
+    </div>
+
+    <div class="dash-card">
+      <div class="dash-card-head"><h3>All Shipments</h3><a href="#">Export CSV</a></div>
+      <div class="dash-tabs">
+        <button class="dash-tab active" data-filter="All">All</button>
+        <button class="dash-tab" data-filter="In Transit">In Transit</button>
+        <button class="dash-tab" data-filter="Delivered">Delivered</button>
+        <button class="dash-tab" data-filter="Delayed">Delayed</button>
+      </div>
+      <table class="dash-table">
+        <thead><tr><th>ID</th><th>Route</th><th>Hub</th><th>Status</th><th>ETA</th></tr></thead>
+        <tbody id="allShipmentTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== INVENTORY ===================== -->
+  <section class="dash-section" id="section-inventory" hidden>
+    <div class="dash-stats">
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-boxes-stacked"></i></div><span class="dash-stat-trend up">+1.8%</span></div>
+        <div class="dash-stat-num">86%</div><div class="dash-stat-label">Avg. Stock Health</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="dash-stat-trend down">-2</span></div>
+        <div class="dash-stat-num">3</div><div class="dash-stat-label">Low Stock Items</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-circle-exclamation"></i></div><span class="dash-stat-trend down">-1</span></div>
+        <div class="dash-stat-num">1</div><div class="dash-stat-label">Critical Items</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-warehouse"></i></div><span class="dash-stat-trend up">+0</span></div>
+        <div class="dash-stat-num">5</div><div class="dash-stat-label">Hubs Tracked</div>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-card-head"><h3>Stock Levels</h3><a href="#">Request Restock</a></div>
+      <table class="dash-table">
+        <thead><tr><th>Item</th><th>Hub</th><th>In Stock</th><th>Min. Required</th><th>Status</th></tr></thead>
+        <tbody id="inventoryTableBody"></tbody>
+      </table>
+      <div class="dash-note-row">
+        <div class="dash-note"><h5>Restock lead time</h5><p>4–7 days from approved supplier, 2 days for local hubs.</p></div>
+        <div class="dash-note"><h5>Auto-reorder</h5><p>Items below minimum trigger a draft purchase order automatically.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROUTES ===================== -->
+  <section class="dash-section" id="section-routes" hidden>
+    <div class="dash-stats">
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-route"></i></div><span class="dash-stat-trend up">+2</span></div>
+        <div class="dash-stat-num">6</div><div class="dash-stat-label">Active Routes</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-truck-fast"></i></div><span class="dash-stat-trend up">+3.5%</span></div>
+        <div class="dash-stat-num">48</div><div class="dash-stat-label">Shipments in Motion</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="dash-stat-trend down">-1</span></div>
+        <div class="dash-stat-num">1</div><div class="dash-stat-label">Congested Routes</div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-gauge-high"></i></div><span class="dash-stat-trend up">+1.2%</span></div>
+        <div class="dash-stat-num">78%</div><div class="dash-stat-label">Route Efficiency</div>
+      </div>
+    </div>
+
+    <div class="dash-card">
+      <div class="dash-card-head"><h3>All Routes</h3><a href="#">Suggest Route</a></div>
+      <div class="dash-item-grid" id="routeGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== REPORTS ===================== -->
+  <section class="dash-section" id="section-reports" hidden>
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Available Reports</h3><a href="#">Request Custom</a></div>
+        <div class="dash-list" id="reportList"></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>This Week's Performance</h3></div>
+        <div class="dash-progress-row"><div class="dash-progress-labels"><span>On-time Delivery</span><span>96.4%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:96.4%"></div></div></div>
+        <div class="dash-progress-row"><div class="dash-progress-labels"><span>Inventory Accuracy</span><span>89%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:89%"></div></div></div>
+        <div class="dash-progress-row"><div class="dash-progress-labels"><span>Route Efficiency</span><span>78%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:78%"></div></div></div>
+        <div class="dash-progress-row"><div class="dash-progress-labels"><span>Customer Satisfaction</span><span>92%</span></div><div class="dash-progress-track"><div class="dash-progress-fill" style="width:92%"></div></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

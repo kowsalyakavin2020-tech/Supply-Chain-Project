@@ -143,3 +143,33 @@ if(typeof gsap !== 'undefined'){
     }
   });
 }
+
+// ---- Offices tab switcher ----
+const officeTabs = document.querySelectorAll('.office-tab');
+const officeViews = document.querySelectorAll('.office-view');
+
+if(officeTabs.length){
+  officeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const idx = tab.dataset.office;
+      officeTabs.forEach(t => t.classList.remove('active'));
+      officeViews.forEach(v => v.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`.office-view[data-office="${idx}"]`).classList.add('active');
+    });
+  });
+}
+
+// ---- Values flip cards scroll-in ----
+const valueFlips = document.querySelectorAll('.value-flip');
+if(valueFlips.length){
+  const valueObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if(entry.isIntersecting){
+        setTimeout(() => entry.target.classList.add('in-view'), i * 120);
+        valueObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  valueFlips.forEach(card => valueObserver.observe(card));
+}

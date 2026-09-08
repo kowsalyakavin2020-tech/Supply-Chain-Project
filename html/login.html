@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Stackly</title>
+<link rel="icon" type="image/webp" href="../images/logo-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div id="preloader">
+  <img src="../images/logo-full.webp" alt="" class="preloader-mark">
+  <div class="preloader-bar"></div>
+</div>
+
+<section class="auth-section">
+  <div class="auth-image">
+  <a href="../index.html" class="back-home-btn">
+    <i class="fa-solid fa-arrow-left"></i> Back to home
+  </a>
+  <img src="../images/login.jpg" alt="Warehouse aisle with worker in motion">
+</div>
+
+  <div class="auth-panel">
+    <div class="auth-panel-inner">
+      <a href="../index.html" class="auth-logo">
+        <img src="../images/logo-full.webp" alt="Stackly">
+      </a>
+
+      <h1>Welcome back! please login</h1>
+      <p class="auth-subtext">Please enter your username and password to access your account and continue enjoying our services.</p>
+
+      <h2 class="auth-form-title">Login</h2>
+
+      <form class="auth-form" id="loginForm" novalidate>
+        <div class="field-wrap">
+          <label for="loginName">Name</label>
+          <input type="text" id="loginName" placeholder="Enter your name">
+          <span class="field-error">Please enter your name.</span>
+        </div>
+
+                <div class="field-wrap">
+          <label for="loginRole">Role</label>
+          <select id="loginRole">
+            <option value="" disabled selected>Select your role</option>
+            <option value="operator">Operator</option>
+            <option value="admin">Admin</option>
+          </select>
+          <span class="field-error">Please select a role.</span>
+        </div>
+
+        <div class="field-wrap">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password">
+          <span class="field-error">Please enter your password.</span>
+        </div>
+
+        <div class="auth-row">
+          <label class="auth-checkbox">
+            <input type="checkbox" id="rememberMe">
+            <span class="auth-checkbox-text">Remember me</span>
+          </label>
+          <a href="./404.html" class="auth-link-muted">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-solid auth-submit-btn">Login</button>
+
+        <p class="auth-switch">I don't have account <a href="signup.html">Signup</a></p>
+
+        <div class="auth-divider"><span>Or continue with</span></div>
+
+        <a href="./404.html"><button type="button" class="auth-social-btn">
+          <i class="fa-brands fa-apple"></i> Login with Apple
+        </button></a>
+        <a href="./404.html"><button type="button" class="auth-social-btn">
+          <i class="fa-brands fa-google"></i> Login with google
+        </button></a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/auth.js"></script>
+
+</body>
+</html>

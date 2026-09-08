@@ -1,0 +1,311 @@
+/* ============================================================
+   AUTH PAGES (Login & Signup) — auth.css
+   ============================================================ */
+
+.auth-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.auth-image{
+  padding: 40px;
+}
+
+.auth-image{
+  position: relative;
+}
+.back-home-btn{
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background: rgba(9, 34, 25, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.back-home-btn:hover{
+  background: rgba(45,212,191,0.25);
+  border-color: var(--accent);
+}
+.back-home-btn i{
+  font-size: 12px;
+}
+
+@media (max-width:960px){
+  .back-home-btn{
+    top: 30px;
+    left: 30px;
+    padding: 8px 16px;
+    font-size: 12.5px;
+  }
+}
+.auth-image img{
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 80px);
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+.auth-panel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px 40px 0;
+}
+.auth-panel-inner{
+  width: 100%;
+  max-width: 460px;
+}
+
+.auth-logo img{
+  height: 34px;
+  width: auto;
+  margin-bottom: 32px;
+}
+
+.auth-panel-inner h1{
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 12px;
+  line-height: 1.3;
+  text-align: center;
+}
+.auth-subtext{
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 0 28px;
+}
+.auth-form-title{
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 26px;
+}
+
+/* Form fields */
+.auth-form .field-wrap{
+  margin-bottom: 18px;
+}
+.auth-form label{
+  display: block;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"]{
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form select{
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'><path d='M1 1L7 7L13 1' stroke='%232DD4BF' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+.auth-form select:focus{
+  border-color: var(--accent);
+}
+.auth-form select option{
+  background: var(--bg-card);
+  color: #fff;
+}
+.field-wrap.error select{
+  border-color: #ff6b6b;
+}
+.auth-form input::placeholder{
+  color: rgba(255,255,255,0.45);
+}
+.auth-form input:focus{
+  border-color: var(--accent);
+}
+
+/* Field validation error */
+.field-error{
+  display: none;
+  color: #ff6b6b;
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+.field-wrap.error .field-error{
+  display: block;
+}
+.field-wrap.error input{
+  border-color: #ff6b6b;
+}
+
+/* Checkbox rows */
+.auth-checkbox{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1.5;
+}
+.auth-checkbox input{
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.auth-link-inline{
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.auth-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.auth-link-muted{
+  font-size: 13.5px;
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+.auth-link-muted:hover{
+  color: var(--accent);
+}
+
+.auth-submit-btn{
+  width: 100%;
+  padding: 14px;
+  font-size: 15.5px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.auth-switch{
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+}
+.auth-switch a{
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.auth-divider{
+  text-align: center;
+  position: relative;
+  margin-bottom: 22px;
+}
+.auth-divider::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+.auth-divider span{
+  position: relative;
+  background: var(--bg);
+  padding: 0 14px;
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
+.auth-social-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: var(--bg-card);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 14px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.auth-social-btn:hover{
+  border-color: var(--accent);
+  background: rgba(45,212,191,0.08);
+}
+.auth-social-btn i{
+  font-size: 17px;
+}
+.auth-social-btn i.fa-google{
+  color: #4285F4;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width:960px){
+  .auth-section{
+    grid-template-columns: 1fr;
+  }
+  .auth-image{
+    padding: 20px 20px 0;
+  }
+  .auth-image img{
+    min-height: 280px;
+    height: 280px;
+  }
+  .auth-panel{
+    padding: 30px 20px 50px;
+  }
+}
+
+@media (max-width:600px){
+  .auth-panel-inner h1{ font-size: 24px; }
+  .auth-image img{ min-height: 220px; height: 220px; }
+  .auth-row{ flex-direction: column; align-items: flex-start; }
+}

@@ -211,6 +211,41 @@ if (typeof gsap !== 'undefined') {
       toggleActions: 'play none none reverse'
     }
   });
+
+  
+  // Case cards scroll-in
+  gsap.utils.toArray('.case-card').forEach((card, i) => {
+    ScrollTrigger.create({
+      trigger: card,
+      start: 'top 85%',
+      onEnter: () => card.classList.add('in-view'),
+      onLeaveBack: () => card.classList.remove('in-view')
+    });
+  });
+
+  // Timeline rows + growing line
+  gsap.utils.toArray('.timeline-row').forEach((row) => {
+    ScrollTrigger.create({
+      trigger: row,
+      start: 'top 82%',
+      onEnter: () => row.classList.add('in-view'),
+      onLeaveBack: () => row.classList.remove('in-view')
+    });
+  });
+
+  const timelineLine = document.getElementById('timelineLine');
+  if (timelineLine) {
+    gsap.to(timelineLine, {
+      height: '100%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.timeline-list',
+        start: 'top 60%',
+        end: 'bottom 80%',
+        scrub: 1
+      }
+    });
+  }
 }
 
 // ---- Stats table rows: fade + slide in on scroll ----

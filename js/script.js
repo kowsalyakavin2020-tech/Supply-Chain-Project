@@ -364,3 +364,39 @@ if (newsletterForm) {
     }
   });
 }
+
+// ---- Integrations + Switch section scroll animation ----
+if (typeof gsap !== 'undefined') {
+  gsap.to('.integrations-head', {
+    opacity:1,
+    y:0,
+    duration:0.8,
+    ease:'power3.out',
+    scrollTrigger:{
+      trigger:'.integrations-section',
+      start:'top 80%'
+    }
+  });
+
+  gsap.to('.switch-before', {
+    opacity:1,
+    y:0,
+    duration:0.7,
+    ease:'power3.out',
+    scrollTrigger:{
+      trigger:'.switch-grid',
+      start:'top 80%'
+    }
+  });
+  gsap.to('.switch-after', {
+    opacity:1,
+    y:0,
+    duration:0.7,
+    delay:0.15,
+    ease:'power3.out',
+    scrollTrigger:{
+      trigger:'.switch-grid',
+      start:'top 80%'
+    }
+  });
+}

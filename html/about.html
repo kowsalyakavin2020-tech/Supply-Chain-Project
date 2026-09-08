@@ -32,8 +32,8 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <a href="#" class="btn btn-solid">Login</a>
-      <a href="#" class="btn btn-outline">Signup</a>
+      <a href="login.html" class="btn btn-solid">Login</a>
+      <a href="signup.html" class="btn btn-outline">Signup</a>
     </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
   </div>
@@ -227,6 +227,125 @@
   </div>
 </section>
 
+<!-- ===== SECTION: WHERE WE OPERATE (tab switcher) ===== -->
+<section class="offices-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Where we operate</h2>
+      <p>Six offices, one follow-the-sun control tower.</p>
+    </div>
+
+    <div class="offices-layout">
+      <div class="offices-tabs" id="officesTabs">
+        <button class="office-tab active" data-office="0">
+          <span class="office-tab-name">Rotterdam</span>
+          <span class="office-tab-sub">HQ · Engineering</span>
+        </button>
+        <button class="office-tab" data-office="1">
+          <span class="office-tab-name">Chicago</span>
+          <span class="office-tab-sub">Customer Ops</span>
+        </button>
+        <button class="office-tab" data-office="2">
+          <span class="office-tab-name">Singapore</span>
+          <span class="office-tab-sub">APAC Control Tower</span>
+        </button>
+        <button class="office-tab" data-office="3">
+          <span class="office-tab-name">São Paulo</span>
+          <span class="office-tab-sub">LatAm Sales</span>
+        </button>
+      </div>
+
+      <div class="offices-panel">
+        <div class="office-view active" data-office="0">
+          <img src="../images/hero-truck-dock.webp" alt="Rotterdam office">
+          <div class="office-view-body">
+            <h3>Rotterdam</h3>
+            <p>Where it started in 2019. Engineering and product still sit a five-minute walk from the port that inspired the whole idea.</p>
+          </div>
+        </div>
+        <div class="office-view" data-office="1">
+          <img src="../images/warehouse.webp" alt="Chicago office">
+          <div class="office-view-body">
+            <h3>Chicago</h3>
+            <p>Our largest customer-operations hub, running daily standups with manufacturing and apparel accounts across North America.</p>
+          </div>
+        </div>
+        <div class="office-view" data-office="2">
+          <img src="../images/automated-warehouse-coordination.jpg" alt="Singapore office">
+          <div class="office-view-body">
+            <h3>Singapore</h3>
+            <p>Home to our APAC control tower analysts, covering the region's highest shipment density around the clock.</p>
+          </div>
+        </div>
+        <div class="office-view" data-office="3">
+          <img src="../images/e967a2f7f58fbbec99cb718bdc53c45eb78b92ef.jpg" alt="São Paulo office">
+          <div class="office-view-body">
+            <h3>São Paulo</h3>
+            <p>Our newest office, opened to support fast-growing LatAm manufacturing and electronics customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION: WHAT WE BELIEVE (flip cards) ===== -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>What we believe</h2>
+      <p>Hover a card to see how it plays out day to day.</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-flip">
+        <div class="value-flip-inner">
+          <div class="value-face value-front">
+            <i class="fa-solid fa-eye"></i>
+            <h3>Visibility over control</h3>
+          </div>
+          <div class="value-face value-back">
+            <p>We'd rather show a team the truth about a delay than pretend our system prevents every one of them.</p>
+          </div>
+        </div>
+      </div>
+      <div class="value-flip">
+        <div class="value-flip-inner">
+          <div class="value-face value-front">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Ship what ops teams touch first</h3>
+          </div>
+          <div class="value-face value-back">
+            <p>Features get built for planners and buyers before they get built for dashboards nobody opens.</p>
+          </div>
+        </div>
+      </div>
+      <div class="value-flip">
+        <div class="value-flip-inner">
+          <div class="value-face value-front">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Slow trust beats fast growth</h3>
+          </div>
+          <div class="value-face value-back">
+            <p>We turn down customers whose systems aren't ready for live data rather than force a bad rollout.</p>
+          </div>
+        </div>
+      </div>
+      <div class="value-flip">
+        <div class="value-flip-inner">
+          <div class="value-face value-front">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Every hire has floor context</h3>
+          </div>
+          <div class="value-face value-back">
+            <p>Even engineers spend a week shadowing a warehouse or freight desk before writing production code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA (same style as home page) -->
 <section>
   <div class="container">
@@ -272,11 +391,11 @@
         </ul>
       </div>
       <div class="contact-block">
-        <h5>Contact us</h5>
-        <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008.</p>
-        <p>info@stackly.com</p>
-        <p>+91 98765 43210</p>
-      </div>
+  <h5>Contact us</h5>
+  <p><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008.</span></p>
+  <p><i class="fa-solid fa-envelope"></i><span>info@stackly.com</span></p>
+  <p><i class="fa-solid fa-phone"></i><span>+91 98765 43210</span></p>
+</div>
       <div>
         <h5>Newsletter</h5>
         <p style="margin-bottom:12px;">Got Event in Mind?<br>Let's collaborate.</p>

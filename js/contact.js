@@ -161,3 +161,39 @@ if (contactForm) {
     window.location.href = '../html/404.html';
   });
 }
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!isActive) item.classList.add('active');
+  });
+});
+
+// ---- FAQ scroll animation ----
+if (typeof gsap !== 'undefined') {
+  gsap.from('.faq-heading > *', {
+    opacity: 0,
+    y: 24,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.contact-faq-section',
+      start: 'top 80%'
+    }
+  });
+  gsap.from('.faq-item', {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: 0.1,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.faq-list',
+      start: 'top 82%'
+    }
+  });
+}
