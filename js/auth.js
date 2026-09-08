@@ -182,3 +182,15 @@ function updateStrengthBar(password) {
     window.location.href = path404;
   });
 }
+
+// ---- Password show/hide toggle ----
+document.querySelectorAll('.toggle-password').forEach(icon => {
+  icon.addEventListener('click', () => {
+    const input = document.getElementById(icon.dataset.target);
+    if (!input) return;
+    const isHidden = input.type === 'password';
+    input.type = isHidden ? 'text' : 'password';
+    icon.classList.toggle('fa-eye');
+    icon.classList.toggle('fa-eye-slash');
+  });
+});

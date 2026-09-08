@@ -56,10 +56,13 @@
         </div>
 
         <div class="field-wrap">
-          <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" placeholder="Enter your password">
-          <span class="field-error">Please enter your password.</span>
-        </div>
+  <label for="loginPassword">Password</label>
+  <div class="password-field-wrap">
+    <input type="password" id="loginPassword" placeholder="Enter your password">
+    <i class="fa-regular fa-eye toggle-password" data-target="loginPassword"></i>
+  </div>
+  <span class="field-error">Please enter your password.</span>
+</div>
 
         <div class="auth-row">
           <label class="auth-checkbox">

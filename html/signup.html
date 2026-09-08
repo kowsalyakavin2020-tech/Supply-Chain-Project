@@ -63,7 +63,10 @@
 
         <div class="field-wrap">
   <label for="signupPassword">Password</label>
-  <input type="password" id="signupPassword" placeholder="Min. 8 characters">
+  <div class="password-field-wrap">
+    <input type="password" id="signupPassword" placeholder="Min. 8 characters">
+    <i class="fa-regular fa-eye toggle-password" data-target="signupPassword"></i>
+  </div>
   <div class="password-strength">
     <div class="strength-bar"></div>
     <div class="strength-bar"></div>
@@ -74,10 +77,13 @@
 </div>
 
         <div class="field-wrap">
-          <label for="signupConfirmPassword">Re-enter password</label>
-          <input type="password" id="signupConfirmPassword" placeholder="Re-enter your password">
-          <span class="field-error">Passwords do not match.</span>
-        </div>
+  <label for="signupConfirmPassword">Re-enter password</label>
+  <div class="password-field-wrap">
+    <input type="password" id="signupConfirmPassword" placeholder="Re-enter your password">
+    <i class="fa-regular fa-eye toggle-password" data-target="signupConfirmPassword"></i>
+  </div>
+  <span class="field-error">Passwords do not match.</span>
+</div>
 
         <div class="field-wrap">
           <label class="auth-checkbox">

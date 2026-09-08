@@ -325,3 +325,24 @@
 .strength-bar.weak{ background: #ff6b6b; }
 .strength-bar.medium{ background: #facc15; }
 .strength-bar.strong{ background: var(--accent); }
+
+/* ===== Password show/hide toggle ===== */
+.password-field-wrap{
+  position: relative;
+}
+.password-field-wrap input{
+  padding-right: 46px;
+}
+.toggle-password{
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+.toggle-password:hover{
+  color: var(--accent);
+}

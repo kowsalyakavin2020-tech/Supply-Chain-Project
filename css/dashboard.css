@@ -30,9 +30,9 @@
   justify-content:space-between;
   gap:10px;
   margin-bottom:18px;
-  padding:0 6px;
+  padding:0 44px;
 }
-.dash-logo img{width:auto;height:28px;}
+.dash-logo img{width:auto;height:36px;}
 .dash-sidebar-close{
   display:none;
   background:none;
@@ -58,7 +58,7 @@
   text-transform:uppercase;
   padding:9px 10px;
   border-radius:var(--radius-md);
-  margin:0 4px 20px;
+  margin:0 12px 20px;
 }
 
 .dash-nav{

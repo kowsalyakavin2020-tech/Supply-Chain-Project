@@ -530,8 +530,8 @@
   display:flex;
   gap:24px;
   overflow-x:auto;
-  padding:0 24px 20px;
-  scroll-snap-type:x mandatory;
+  padding:0 24px 20px;   /* திரும்ப padding வச்சுடலாம் */
+  
   scrollbar-width:thin;
   scrollbar-color:var(--accent) transparent;
 }
@@ -550,6 +550,9 @@
   transform:translateY(-8px);
   border-color:var(--accent);
 }
+
+
+
 .case-img{
   height:200px;
   overflow:hidden;
