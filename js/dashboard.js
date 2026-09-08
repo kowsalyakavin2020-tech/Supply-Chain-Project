@@ -61,7 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtitleEl = document.getElementById('pageSubtitle');
     const entry = sectionTitles[name] && sectionTitles[name][pageRole];
     if (titleEl && entry) titleEl.textContent = entry[0];
-    if (subtitleEl && entry) subtitleEl.textContent = entry[1];
+    if (subtitleEl) {
+      // Overview keeps a personalized welcome line right under the title
+      // (matches the reference layout — no separate welcome banner).
+      subtitleEl.textContent = name === 'overview'
+        ? `Welcome back, ${user.name} 👋`
+        : (entry ? entry[1] : '');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -80,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Set the initial title/subtitle (overview) now that we know the user's name
+  showSection('overview');
+
   // ---- Sidebar toggle (mobile) ----
   const sidebar = document.getElementById('dashSidebar');
   const menuToggle = document.getElementById('dashMenuToggle');
@@ -91,6 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (menuToggle) menuToggle.addEventListener('click', openSidebar);
   if (backdrop) backdrop.addEventListener('click', closeSidebar);
   if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+
+  // ---- Search bar (Enter to search) ----
+  document.querySelectorAll('.dash-search input').forEach(input => {
+    const originalPlaceholder = input.placeholder;
+    let restoreTimer = null;
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+
+      const box = input.closest('.dash-search');
+      const value = input.value.trim();
+
+      if (!value) {
+        clearTimeout(restoreTimer);
+        box.classList.remove('dash-search-error');
+        void box.offsetWidth; // restart animation if triggered again quickly
+        box.classList.add('dash-search-error');
+        input.placeholder = 'Type something to search';
+        restoreTimer = setTimeout(() => {
+          box.classList.remove('dash-search-error');
+          input.placeholder = originalPlaceholder;
+        }, 1800);
+        return;
+      }
+
+      window.location.href = '404.html';
+    });
+  });
 
   // ---- Logout ----
   document.querySelectorAll('[data-logout]').forEach(btn => {
