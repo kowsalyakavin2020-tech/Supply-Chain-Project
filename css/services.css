@@ -9,7 +9,7 @@
   position: relative;
   background: 
     linear-gradient(180deg, rgba(9,34,25,0.88) 0%, rgba(9,34,25,0.92) 100%),
-    url('../images/67500da471d8925281705c6c32f6a2ad4784e59b.jpg') center/cover no-repeat;
+    url('../images/67500da471d8925281705c6c32f6a2ad4784e59b.webp') center/cover no-repeat;
 }
 .svc-hero-grid {
   display: grid;
@@ -482,18 +482,7 @@
   transform: translateY(0);
 }
 
-/* ===== FOOTER EXTRA ===== */
-.footer-terms {
-  color: var(--text-faint);
-  font-size: 13px;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 960px) {
